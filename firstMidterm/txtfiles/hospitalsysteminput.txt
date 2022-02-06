@@ -1,0 +1,47 @@
+20
+9658 Stefan 90 MALE Peter
+2209 Stefan 0 MALE Sofia
+7563 Peter 15 MALE Joe
+9586 Peter 67 MALE Mark
+2703 Sarah 31 FEMALE Mark
+398 Peter 19 MALE Peter
+4421 Sofia 4 FEMALE Mark
+7193 Sofia 63 FEMALE Sofia
+3432 Jack 65 MALE Pamela
+866 Jack 72 MALE Sarah
+4022 Mark 71 MALE Jack
+9588 Mark 43 MALE Mark
+6577 Sofia 69 FEMALE Sofia
+9635 Peter 17 MALE Peter
+9230 Sarah 43 FEMALE Stefan
+8169 Sarah 60 FEMALE Peter
+9912 Sofia 66 FEMALE Peter
+509 Stefan 26 MALE Peter
+2599 Stefan 55 MALE Sarah
+6926 Sarah 40 FEMALE Emily
+25
+hijklmn Sarah 27 FEMALE Ana Fever
+jklmnop Pamela 6 FEMALE Emily Toothache
+hijklmn Peter 97 MALE Sarah Headache
+opqrstu Pamela 39 FEMALE Stefan Toothache
+bcdefgh Peter 9 MALE Peter Toothache
+ghijklm Emily 43 FEMALE Peter Fever
+pqrstuv Pamela 1 FEMALE Sarah Fever
+hijklmn Peter 11 MALE Peter Headache
+klmnopq Peter 92 MALE Joe Toothache
+klmnopq Sarah 92 FEMALE Peter Toothache
+bcdefgh Peter 22 MALE Sarah Headache
+jklmnop Jack 70 MALE Stefan Headache
+hijklmn Sofia 65 FEMALE Joe Fever
+hijklmn Mark 23 MALE Sofia Toothache
+rstuvwx Jack 15 MALE Stefan Toothache
+jklmnop Sofia 66 FEMALE Jack Headache
+nopqrst Sarah 74 FEMALE Stefan Headache
+abcdefg Stefan 54 MALE Emily Fever
+ghijklm Jack 81 MALE Ana Headache
+nopqrst Stefan 38 MALE Joe Headache
+ghijklm Sarah 41 FEMALE Sarah Headache
+pqrstuv Mark 51 MALE Peter Fever
+ghijklm Pamela 6 FEMALE Pamela Headache
+opqrstu Stefan 44 MALE Peter Fever
+mnopqrs Mark 25 MALE Peter Toothache
