@@ -1,2 +1,2 @@
-# NP2021
+# Napredno programiranje 2021
 Exercises: aud, labs, first midterm, second midterm, and final exam problems.
