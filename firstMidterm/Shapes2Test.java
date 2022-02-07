@@ -6,13 +6,6 @@ import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-class IrregularCanvasException extends Exception{
-    public IrregularCanvasException(String id, double maxArea){
-        super(String.format("Canvas %s has a shape with area larger than %.2f", id, maxArea));
-    }
-}
-
 abstract class Shape{
     int size;
 
@@ -23,7 +16,7 @@ abstract class Shape{
     abstract double area();
     abstract Type getType();
 
-    public static Shape createShape(int size, char type, double maxArea){
+    public static Shape createShape(char type, int size, double maxArea){
         switch(type){
             case 'S':
                 return new Square(size);
@@ -33,8 +26,8 @@ abstract class Shape{
                 return null;
         }
     }
-}
 
+}
 class Circle extends Shape{
     public Circle(int size){
         super(size);
@@ -67,10 +60,18 @@ class Square extends Shape {
 enum Type{
     SQUARE, CIRCLE
 }
+
+class IrregularCanvasException extends Exception{
+    public IrregularCanvasException(String id, double maxArea){
+        super(String.format("Canvas %s has a shape with area larger than %.2f", id, maxArea));
+    }
+}
+
 class Canvas implements Comparable<Canvas> {
 
     String id;
     List<Shape> shapes;
+
 
     public Canvas(String id, List<Shape> shapes) {
         this.id = id;
@@ -82,7 +83,7 @@ class Canvas implements Comparable<Canvas> {
         String orderId = parts[0];
         List<Shape> shapes = new ArrayList<>();
         for (int i = 1; i < parts.length; i += 2) {
-            Shape s = Shape.createShape(Integer.parseInt(parts[i + 1]), parts[i].charAt(0), maxArea);
+            Shape s = Shape.createShape( parts[i].charAt(0), Integer.parseInt(parts[i + 1]), maxArea);
             if (s.area() > maxArea) {
                 throw new IrregularCanvasException(orderId, maxArea);
             }
@@ -124,9 +125,6 @@ class ShapesApplication{
         this.maxArea = maxArea;
     }
 
-/* 1. bs3sdfs C 3224 S 21387 C 3948 S 87323
-   2. b2w323rr S 3289 C 328794 S 32894 S 23983
- */
     public void readCanvases(InputStream inputStream){
         canvas = new BufferedReader(new InputStreamReader(inputStream))
                 .lines()
@@ -144,7 +142,7 @@ class ShapesApplication{
 
     public void printCanvases(OutputStream os){
         PrintWriter pw = new PrintWriter(os);
-        canvas.stream().sorted(Comparator.reverseOrder()).forEach(p -> pw.println(p));
+        canvas.stream().sorted(Comparator.reverseOrder()).forEach(pw::println);
         pw.flush();
     }
 }
@@ -160,5 +158,7 @@ public class Shapes2Test {
 
         System.out.println("===PRINTING SORTED CANVASES TO OUTPUT STREAM===");
         shapesApplication.printCanvases(System.out);
+
+
     }
 }
